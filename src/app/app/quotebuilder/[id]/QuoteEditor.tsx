@@ -94,10 +94,10 @@ export function QuoteEditor({ quoteId }: QuoteEditorProps) {
       if (!accountId) return [];
       const { data } = await supabase
         .from('clients')
-        .select('id, name, company, email')
+        .select('id, name, company, email, phone')
         .eq('account_id', accountId)
         .order('name');
-      return (data ?? []) as Pick<Client, 'id' | 'name' | 'company' | 'email'>[];
+      return (data ?? []) as Pick<Client, 'id' | 'name' | 'company' | 'email' | 'phone'>[];
     },
     enabled: !!accountId,
   });
