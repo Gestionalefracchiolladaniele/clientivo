@@ -15,7 +15,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { useToast } from '@/components/ui/toast';
 import { useEffectiveAccountId } from '@/hooks/useEffectiveAccountId';
 
-type QuoteWithClient = Quote & { clients: { name: string; company: string | null; email: string | null } | null };
+type QuoteWithClient = Quote & { clients: { name: string; company: string | null; email: string | null; phone: string | null } | null };
 
 const statusConfig = {
   draft: { label: 'Bozza', variant: 'secondary' as const },
